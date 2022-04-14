@@ -20,8 +20,27 @@ void Setup() {
 }
 
 void Draw() {
+    system("clear");
+    cout << endl;
+    for (int i = 0; i < width; i++) {
+        cout << "#";
+    }
+    cout << endl;
 
-}
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            if (j == 0 || j == width - 2) {
+                cout << "#";
+            }
+            cout << " ";
+        }
+        cout << endl;
+    }
+
+    for (int l = 0; l < width; l++) {
+        cout << "#";
+    }
+} 
 
 void Input () {
 
