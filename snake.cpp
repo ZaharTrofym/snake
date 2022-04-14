@@ -3,6 +3,8 @@
 using namespace std;
 
 bool gameOver;
+const int width = 20;
+const int height = 20;
 
 void Setup() {
     gameOver = false;
@@ -17,11 +19,17 @@ void Input () {
 }
 
 void Logic() {
-    
+
 }
 
 int main() {
     Setup();
+
+    while(!gameOver) {
+        Draw();
+        Input();
+        Logic();
+    }
 
     return 0;
 }
