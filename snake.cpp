@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
@@ -10,12 +11,13 @@ enum eDirection{ STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirection dir; 
 
 void Setup() {
+    srand(time(NULL));
     gameOver = false;
     dir = STOP;
-    x = width / 2;
-    y = height / 2;
-    fruitX = rand() / width;
-    fruitY = rand() / height;
+    x = width / 2 - 1;
+    y = height / 2 - 1;
+    fruitX = rand() % width;
+    fruitY = rand() % height;
     score = 0;
 }
 
@@ -34,7 +36,15 @@ void Draw() {
             if (j == 0 || j == width - 1) {
                 cout << "#";
             }
-            cout << " ";
+            if (q == y && j == x) {
+                cout << "0";
+            }
+            else if (q == fruitY && j == fruitX) {
+                cout << "8"; 
+            }
+            else {
+                cout << " ";
+            }
         }
         cout << endl;
     }
