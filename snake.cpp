@@ -24,14 +24,14 @@ void Draw() {
     
     cout << endl;
 
-    for (int i = 0; i < width; i++) {
+    for (int i = 0; i < width + 1; i++) {
         cout << "#";
     }
     cout << endl;
 
     for (int q = 0; q < height; q++) {
         for (int j = 0; j < width; j++) {
-            if (j == 0 || j == width - 2) {
+            if (j == 0 || j == width - 1) {
                 cout << "#";
             }
             cout << " ";
@@ -39,7 +39,7 @@ void Draw() {
         cout << endl;
     }
 
-    for (int l = 0; l < width; l++) {
+    for (int l = 0; l < width + 1; l++) {
         cout << "#";
     }
 } 
